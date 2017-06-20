@@ -19,10 +19,12 @@ describe('Product Model', function() {
 
 	
             var product = new Product({
-
-                category: 'Beverage',
-                name: 'Pakola'
-            });
+            	category : '5945345ac53d0a6c0a419c73',
+            	name : 'Pakola Doodh Soda',
+            	quantityPerUnit :'25ml',
+            	unitPrice : 20,
+            	unitsInStock : 10
+	        });
 
             product.save(function(err, saved) {
                 should.not.exist(err);
