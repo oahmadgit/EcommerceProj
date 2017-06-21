@@ -14,5 +14,5 @@ module.exports = function(app) {
         .delete(users.requiresLogin, categories.delete);
 
     // Finish by binding the article middleware
-  //  app.param('categoryId', categories.categoryByID);
+   app.param('categoryId', categories.categoryByID);
 };
