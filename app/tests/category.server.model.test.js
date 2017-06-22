@@ -56,6 +56,7 @@ describe('Category Model', function() {
 
             category.save(function(err) {
                 should.not.exist(err);
+                
 
                 var duplicate = new Category({
                     name: 'Beverages'

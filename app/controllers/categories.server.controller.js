@@ -49,6 +49,19 @@ exports.read = function(req, res) {
  * Update a Category
  */
 exports.update = function(req, res) {
+		var category = req.Category;
+		category = _.extend(category, req.body);
+	
+
+	category.save(function(err) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.status(201).json(category);
+		}
+	});
 
 };
 
@@ -56,6 +69,18 @@ exports.update = function(req, res) {
  * Delete an Category
  */
 exports.delete = function(req, res) {
+var category = req.Category;
+
+			category.remove(function(err) {
+				if (err) {
+					return res.status(400).send({
+						message: errorHandler.getErrorMessage(err)
+					});
+				} else {
+					res.json(category);
+				}
+			});
+
 
 };
 

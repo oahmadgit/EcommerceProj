@@ -6,11 +6,11 @@ angular.module('categories').config(['$stateProvider',
 		// Categories state routing
 		$stateProvider.
 		state('edit-category', {
-			url: '/edit-category',
+			url: '/categories/:categoryId/edit',
 			templateUrl: 'modules/categories/views/edit-category.client.view.html'
 		}).
 		state('view-category', {
-			url: '/view-category',
+			url: '/categories/:categoryId',
 			templateUrl: 'modules/categories/views/view-category.client.view.html'
 		}).
 		state('create-category', {
