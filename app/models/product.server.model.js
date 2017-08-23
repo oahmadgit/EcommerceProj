@@ -54,6 +54,20 @@ var ProductSchema = new Schema({
 	discontinued: {
 		type: Boolean,
 		default: false
+	},
+	 description: {
+        type: String,
+        default: '',
+        trim: true      // types have specific functions e.g. trim, lowercase, uppercase - http://mongoosejs.com/docs/api.html#schema-string-js
+    },
+	path:{
+		type:'String',
+		default:''
+	},
+	userId:{
+		type: Schema.Types.ObjectId,
+		ref: 'User',
+		required: 'invalid userId'
 	}
 });
 

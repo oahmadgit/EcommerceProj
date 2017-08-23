@@ -17,6 +17,6 @@
     <pagination total-items="categories.length" ng-model="currentPage" ng-change="pageChanged()" max-size="pageSize" ng-show="categories.length > pageSize"></pagination>
     <!-- end -->
     <div class="alert alert-warning text-center" data-ng-hide="!categories.$resolved || categories.length">
-        No categories yet, why don't you <a href="/#!/categories/create">create one</a>?
+        No categories yet, why don't you <a href="/#!/create-category">create one</a>?
     </div>
 </section>

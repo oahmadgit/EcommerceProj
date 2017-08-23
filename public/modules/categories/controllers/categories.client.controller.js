@@ -18,7 +18,8 @@ angular.module('categories').controller('CategoriesController', ['$scope', '$sta
 			// Create new Category object
 			var category = new Categories ({
 				name: this.name,
-				description: this.description
+				description: this.description,
+				//userId:$scope.authentication.user.email
 			});
 
 			// Redirect after save
@@ -62,7 +63,19 @@ angular.module('categories').controller('CategoriesController', ['$scope', '$sta
 
 		// Find a list of Categories
 		$scope.find = function() {
-			$scope.categories = Categories.query();
+		// 	Categories.query().$promise.then(function(res){
+		// 	var arr=[];
+		// 	var data = res;
+		// 	for(var x=0;x<data.length;x++){
+		// 		if(data[x].userId == $scope.authentication.user.email){
+		// 			arr.push(data[x]);
+		// 		}
+		// 	}
+			
+		// 	$scope.categories = arr;
+		// });
+			
+			$scope.categories= Categories.query();
 		};
 
 		// Find existing Category
