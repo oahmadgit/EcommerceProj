@@ -3,7 +3,7 @@
 module.exports = {
 	app: {
 		title: 'basicApp',
-		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
+		description: 'Ecommerce website using full stack solution',
 		keywords: 'MongoDB, Express, AngularJS, Node.js'
 	},
 	port: process.env.PORT || 3000,
@@ -25,7 +25,8 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/ngCart/dist/ngCart.js'
 			]
 		},
 		css: [

@@ -1,8 +1,8 @@
 'use strict';
 
 
-angular.module('core').controller('HomeController', ['$scope', '$stateParams', '$location', 'Authentication', 'Products', 'Categories','Users', '$filter',
-	function($scope, $stateParams, $location, Authentication, Products, Categories, Users, $filter) {
+angular.module('core').controller('HomeController', ['$window','$scope', '$stateParams', '$location', 'Authentication', 'Products', 'Categories','Users', '$filter',
+	function($window,$scope, $stateParams, $location, Authentication, Products, Categories, Users, $filter) {
 		$scope.authentication = Authentication;
 		$scope.categories = Categories.query();
 		$scope.users = Users.query();
@@ -23,10 +23,15 @@ angular.module('core').controller('HomeController', ['$scope', '$stateParams', '
 		var appendCategory = function appendCategory(p) {
 			// You could substitue use of filter here with underscore etc.
 			p.category = $filter('filter')($scope.categories, {_id: p.category})[0];
-			//p.userId = $filter('filter')($scope.users, {_id: p.userId})[0];
+			p.user = $filter('filter')($scope.users, {_id: p.user})[0];
 		};
 
-	
+	//  $scope.seeDesc = function(prodID){
+	// 	//myApp.setValue(pro)
+	// 	 //HeaderController.value = prodID; 
+	// 	 messages.value= prodID;
+	// 	 $window.location.href = '#!/item/'+prodID;
+	//  }
 
 		// Find a list of Products
 		$scope.find = function() {
@@ -55,7 +60,7 @@ angular.module('core').controller('HomeController', ['$scope', '$stateParams', '
 		};
 		// Search for a product
 		$scope.productSearch = function(product) {
-			$location.path('products/' + product._id);
+			$location.path('item/' + product._id);
 		};
 
 	}

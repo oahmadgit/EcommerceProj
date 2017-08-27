@@ -1,6 +1,6 @@
 {
-  "name": "northwindnode",
-  "description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js",
+  "name": "basicapp",
+  "description": "Ecommerce website for EC project using MEAN JS",
   "version": "0.0.1",
   "engines": {
     "node": "0.10.x",

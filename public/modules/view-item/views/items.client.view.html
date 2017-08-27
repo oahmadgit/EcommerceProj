@@ -1,0 +1,23 @@
+<section data-ng-controller="CartController1" data-ng-init="findOne()">
+
+
+<div class="row">
+    <div class="col-md-6">
+      <div class="page-header">
+		<h1 data-ng-bind="product.name"></h1>
+		<p>{{ product.category.name }}</p>
+		 <div class="imgAbt">
+                <img width="600" height="400" src="modules/products/img/{{product.path}}" />
+            </div>
+      </div>
+    </div>
+	<div class="col-md-6">
+		<h3>By {{ product.user.username }}</h3>
+		<p>{{ product.description }}</p>
+	
+        <ngcart-addtocart id="{{product._id}}" name="{{product.name}}" price="{{product.unitPrice}}" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
+    </div>
+     
+</div>
+
+</section

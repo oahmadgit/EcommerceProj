@@ -30,7 +30,7 @@ angular.module('products').controller('ProductsController', ['$scope', '$statePa
 				unitPrice: this.unitPrice,
 				unitsInStock: this.unitsInStock,
 				unitsOnOrder: this.unitsOnOrder,
-				userId:$scope.authentication.user._id
+				user:$scope.authentication.user._id
 
 			});
 
@@ -87,6 +87,7 @@ angular.module('products').controller('ProductsController', ['$scope', '$statePa
 		var appendCategory = function appendCategory(p) {
 			// You could substitue use of filter here with underscore etc.
 			p.category = $filter('filter')($scope.categories, {_id: p.category})[0];
+			
 		};
 
 		// Find a list of Products
@@ -116,7 +117,7 @@ angular.module('products').controller('ProductsController', ['$scope', '$statePa
 		};
 		// Search for a product
 		$scope.productSearch = function(product) {
-			$location.path('products/' + product._id);
+			$location.path('item/' + product._id);
 		};
 	}
 

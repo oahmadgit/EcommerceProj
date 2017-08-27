@@ -62,9 +62,10 @@ var ProductSchema = new Schema({
     },
 	path:{
 		type:'String',
-		default:''
+		default:'default.png'
+
 	},
-	userId:{
+	user:{
 		type: Schema.Types.ObjectId,
 		ref: 'User',
 		required: 'invalid userId'
