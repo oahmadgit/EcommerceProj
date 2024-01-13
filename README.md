@@ -17,36 +17,27 @@ Ensure you have the following installed on your system:
 - MongoDB
 - Node.js
 - Angular CLI
+- Grunt CLI
 
 ## Getting Started
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/mean-ecommerce-skeleton.git
-    cd mean-ecommerce-skeleton
+    git clone https://github.com/oahmadgit/EcommerceProj
+    cd EcommerceProj
     ```
 
 2. Install dependencies:
 
     ```bash
-    cd backend && npm install
-    cd ../frontend && npm install
+    npm install
     ```
 
-3. Set up MongoDB:
-
-    - Create a MongoDB database.
-    - Update the database connection details in `backend/config/database.js`.
-
-4. Run the application:
+3. Run the application:
 
     ```bash
-    # Start the backend server
-    cd backend && npm start
-
-    # Start the Angular frontend
-    cd frontend && ng serve
+    npm start
     ```
 
 Visit `http://localhost:4200` to view the application.
